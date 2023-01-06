@@ -1,0 +1,52 @@
+@import './font.scss';
+@import './variables.scss';
+@import './reset.scss';
+
+.container {
+    max-width: 1320px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    @media(max-width: 1319px) {
+        max-width: 1140px;
+    }
+
+    @media(max-width: 1139px) {
+        max-width: 960px;
+    }
+
+    @media(max-width: 959px) {
+        max-width: 100%;
+    }
+
+    @media(max-width: 719px) {
+
+    }
+    @media(max-width: 539px) {
+
+    }
+}
+
+.button {
+    font-size: 22px;
+    color: $primary;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 18px 30px;
+    background: $link-color;
+    border-radius: 30px;
+    margin-top: 40px;
+
+    @media(max-width: 1139px) {
+        display: block;
+        max-width: max-content;
+        margin: 0 auto;
+        margin-top: 40px;
+        font-size: 18px;
+    }
+
+    &:hover {
+        background: #0088b6;
+    }
+}
