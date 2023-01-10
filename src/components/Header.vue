@@ -5,7 +5,7 @@
 
         <div class="header__content-logo">
           <router-link :to="{name: 'home'}">
-            Partniers
+            <img src="@/assets/icons/header_logo.svg" alt="logo">
           </router-link>
         </div>
         
@@ -43,7 +43,7 @@ export default {
           id: 1
         },
         {
-          name: 'Партнеры',
+          name: 'Представительства',
           path: 'partniers',
           id: 2
         },
@@ -114,6 +114,10 @@ export default {
         &:hover {
           color: $link-color;
         } 
+
+        img {
+          width: 60px;
+        }
       }
     }
 

@@ -13,18 +13,6 @@
       </div>
     </div>
 
-    <div class="home__mission">
-      <div class="container">
-        <div class="home__mission-wrapper">
-          <div class="mission-content" v-animate-onscroll="{down : 'toTop'}">
-            <h1>Наши цели</h1>
-            <p><span>Мы поможем вам</span> стать успешными как мы!)</p>
-            <router-link class="button" :to="{name: 'about'}">Подробнее</router-link>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="home__team">
       <div class="container">
         <div class="home__team-wrapper">
@@ -124,56 +112,6 @@ export default {
           font-weight: 700;
           color: $primary;
           margin-top: 20px;
-          @media(max-width: 1139px) {
-            font-size: 18px;
-          }
-          
-          span {
-            text-transform: uppercase;
-          }
-        }
-      }
-    }
-  }
-
-  &__mission {
-    height: 100vh;
-    background-image: url('@/assets/home/ourMission_bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    &-wrapper {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-
-      .mission-content {
-        max-width: 440px;
-        margin-bottom: -100px;
-        opacity: 0;
-        transition: 1.2s;
-        @media(max-width: 1139px) {
-          max-width: 100%;
-          flex: 0 0 100%;
-        }
-
-        h1 {
-          font-size: 72px;
-          font-weight: 900;
-          color: $primary;
-
-          @media(max-width: 1139px) {
-            font-size: 36px;
-          }
-        }
-
-        p {
-          font-size: 22px;
-          font-weight: 700;
-          color: $primary;
-          margin-top: 20px;
-
           @media(max-width: 1139px) {
             font-size: 18px;
           }

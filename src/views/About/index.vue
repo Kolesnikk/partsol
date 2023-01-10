@@ -2,10 +2,10 @@
   <div class="about" id="about">
     <div class="container">
 
-      <h1>MISSION & VISION</h1>
+      <h1>Цели и видение</h1>
 
       <div class="about__mission">
-        <h2 class="title">OUR MISSION</h2>
+        <h2 class="title">Наши цели</h2>
         <p class="text"><b>Our mission is to build smarter through multifunctional construction robots based on 3D printing technology.</b> We constantly improve printing speed, efficiency, labor need, and material cost to challenge conventional construction.</p>
       </div>
 
@@ -123,6 +123,7 @@ export default {
     opacity: 0;
     margin-left: -100px;
     animation: fromLeft 1s forwards;
+    text-align: center;
     @media(max-width: 1139px) {
       font-size: 64px;
     }

@@ -2,17 +2,18 @@
   <div class="partniers">
     <div class="container">
 
-      <h1 class="title">Наши партнеры</h1>
+      <h1 class="title">Наши представительства</h1>
       <p class="subtitle">We are delighted to present some of the achievements and collaborations of COBOD. </p>
     
       <div class="partniers__content">
 
         <div class="partniers__content-card" v-for="i in card" :key="i.id">
           <div class="image">
+            <span>{{ i.country }}</span>
             <img :src="i.img" alt="">
           </div>
           <div class="text">
-            <h2>{{ i.title }}</h2>
+            <h2>{{ i.city }}</h2>
             <p>{{ i.text }}</p>
           </div>
         </div>
@@ -31,40 +32,46 @@ export default {
       card: [
         {
           id: 0,
-          img: require('@/assets/partniers/spacex.jpg'),
-          title: 'GENERAL ELECTRIC',
-          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones, enabling the capture of stronger winds generating more energy at a lower cost.'
+          img: require('@/assets/partniers/moscow.jpg'),
+          country: 'Россия',
+          city: 'Москва',
+          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones'
         },
         {
           id: 1,
-          img: require('@/assets/partniers/spacex.jpg'),
-          title: 'GENERAL ELECTRIC',
-          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones, enabling the capture of stronger winds generating more energy at a lower cost.'
+          img: require('@/assets/partniers/dubai.jpg'),
+          country: 'ОАЭ',
+          city: 'Дубай',
+          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones'
         },
         {
           id: 2,
-          img: require('@/assets/partniers/spacex.jpg'),
-          title: 'GENERAL ELECTRIC',
-          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones, enabling the capture of stronger winds generating more energy at a lower cost.'
+          img: require('@/assets/partniers/pekin.jpg'),
+          country: 'Китай',
+          city: 'Пекин',
+          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones'
         },
         {
-          id: 0,
-          img: require('@/assets/partniers/spacex.jpg'),
-          title: 'GENERAL ELECTRIC',
-          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones, enabling the capture of stronger winds generating more energy at a lower cost.'
+          id: 3,
+          img: require('@/assets/partniers/moscow.jpg'),
+          country: 'Россия',
+          city: 'Москва',
+          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones'
         },
         {
-          id: 1,
-          img: require('@/assets/partniers/spacex.jpg'),
-          title: 'GENERAL ELECTRIC',
-          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones, enabling the capture of stronger winds generating more energy at a lower cost.'
+          id: 4,
+          img: require('@/assets/partniers/dubai.jpg'),
+          country: 'ОАЭ',
+          city: 'Дубай',
+          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones'
         },
         {
-          id: 2,
-          img: require('@/assets/partniers/spacex.jpg'),
-          title: 'GENERAL ELECTRIC',
-          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones, enabling the capture of stronger winds generating more energy at a lower cost.'
-        }
+          id: 5,
+          img: require('@/assets/partniers/pekin.jpg'),
+          country: 'Китай',
+          city: 'Пекин',
+          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones'
+        },
       ]
     }
   }
@@ -171,8 +178,24 @@ export default {
         box-shadow:  0 15px 20px rgba(0, 0, 0, .2);
       }
       .image {
+        position: relative;
+
+        span {
+          position: absolute; 
+          display: block;
+          top: 15px;
+          left: 15px;
+          background: $link-color;
+          color: #ffffff;
+          font-weight: 600;
+          font-size: 16px;
+          padding: 5px 10px;
+          border-radius: 12px;
+        }
+
         img {
-          max-width: 100%;
+          width: 100%;
+          height: 200px;
         }
       }
 

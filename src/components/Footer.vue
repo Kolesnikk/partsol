@@ -5,7 +5,9 @@
       <div class="footer__content">
 
         <div class="footer__content-logo">
-          <router-link :to="{name: 'home'}">Partniers & Solutions</router-link>
+          <router-link :to="{name: 'home'}">
+            <img src="@/assets/icons/footer_logo.svg" alt="logo">
+          </router-link>
         </div>
 
         <div class="footer__content-info">
@@ -86,6 +88,10 @@ export default {
 
         @media(max-width: 1319px) {
           font-size: 28px;
+        }
+
+        img {
+          width: 150px;
         }
       }
 
