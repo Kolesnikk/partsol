@@ -1,42 +1,35 @@
 <template>
   <div class="about" id="about">
+
+    <div class="about__content" v-for="i in content" :key="i.id">
+      <div class="container">
+
+        <div class="about__content-wrapper">
+          <div class="about__content-text" v-animate-onscroll="{down : 'toTop'}">
+            <h2>Partners & solutions</h2>
+            <p>{{ i.text }}</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
     <div class="container">
+      <div class="about__team">
+        <h1>{{$t('pages.aboutPage.team.title')}}</h1>
 
-      <h1>Цели и видение</h1>
+        <div class="about__team-content">
 
-      <div class="about__mission">
-        <h2 class="title">Наши цели</h2>
-        <p class="text"><b>Our mission is to build smarter through multifunctional construction robots based on 3D printing technology.</b> We constantly improve printing speed, efficiency, labor need, and material cost to challenge conventional construction.</p>
+          <div class="about__team-card" v-for="person in team" :key="person.id" v-animate-onscroll="{down : 'fromLeft'}">
+            <div class="about__team-card_image">
+              <img :src="person.img">
+            </div>
+            <h2 class="about__team-card_name">{{ person.name }}</h2>
+            <p class="about__team-card_post">{{ person.post }}</p>
+          </div>
+
+        </div>
       </div>
-
-      <div class="about__vision">
-        <h2 class="title">OUR VISION</h2>
-        <p class="text"><b>Our vision is to automate minimum 50% of construction processes on building sites around the world</b>With our future printer systems, the printers can hardly be called just printers anymore – they will be multifunctional construction robots. Right now, we are working with the first movers. We are ahead of tomorrow’s norms and the big volume market. However, we will democratize 3D construction, making it accessible to all. Maturing technology and lowering risk – selling 3D robotics & automation solutions beyond first-movers and entrepreneurs.</p>
-      </div>
-
-      <div class="about__position">
-        <h2 class="title">BRAND POSITION</h2>
-        <p class="text"><b>The world leader in 3D construction printing solutions.</b></p>
-
-        <ul class="list">
-          <li v-for="i in list" :key="i">
-            {{ i }}
-          </li>
-        </ul>
-      </div>
-
-      <div class="image">
-        <img src="@/assets/home/partniers_bg.jpg" alt="">
-      </div>
-
-      <div class="about__strategy">
-        <h2 class="title">STRATEGY</h2>
-        <p class="text"><b>First! And continuously improving.</b></p>
-        <p class="text">We conduct extensive research, development, and collaboration with the globally leading academic institutions, material suppliers, and the most demanding customers in the industry. We constantly push the limits of applications, size, speed, and automation by taking on new challenges in construction. We expand our architecture, design, engineering, and construction competencies to support our clients in executing state-of-the-art automated and printed construction projects.</p>
-        <p class="text">We work based on open-source both for software and materials, and we welcome any chance we can to cooperate on making better solutions.</p>
-        <p class="text">We deliver a high-quality modular system, which is future-proof for retrofit, expansion, innovation, and robotics.</p>
-      </div>
-
     </div>
   </div>
 </template>
@@ -46,11 +39,69 @@ export default {
   name: 'about-page',
   data() {
     return {
-      list: [
-        'Leading in VOLUME with most printers sold globally. The total of COBOD printers will reach 100 next year.',
-        'Leading in APPLICATIONS from residential and commercial buildings to wind turbine towers.',
-        'Leading in TECHNOLOGY with unsurpassed hard- and software solutions facilitating the fastest and tallest construction of multi-story buildings.',
-        'Leading in COST based on the game-changing D.fab solution, reducing the cost of 3D printable materials with 90% vs. industry standards.'
+      content: [
+        {
+          id: 0,
+          text: this.$t('pages.aboutPage.content.txt1')
+        },
+        {
+          id: 1,
+          text: this.$t('pages.aboutPage.content.txt2')
+        },
+        {
+          id: 2,
+          text: this.$t('pages.aboutPage.content.txt3')
+        },
+      ],
+      team: [
+        {
+          id: 0,
+          name: this.$t('pages.aboutPage.team.name'),
+          post: this.$t('pages.aboutPage.team.post'),
+          img: require('@/assets/About/team/team.jpg')
+        },
+        {
+          id: 1,
+          name: this.$t('pages.aboutPage.team.name'),
+          post: this.$t('pages.aboutPage.team.post'),
+          img: require('@/assets/About/team/team.jpg')
+        },
+        {
+          id: 2,
+          name: this.$t('pages.aboutPage.team.name'),
+          post: this.$t('pages.aboutPage.team.post'),
+          img: require('@/assets/About/team/team.jpg')
+        },
+        {
+          id: 3,
+          name: this.$t('pages.aboutPage.team.name'),
+          post: this.$t('pages.aboutPage.team.post'),
+          img: require('@/assets/About/team/team.jpg')
+        },
+        {
+          id: 4,
+          name: this.$t('pages.aboutPage.team.name'),
+          post: this.$t('pages.aboutPage.team.post'),
+          img: require('@/assets/About/team/team.jpg')
+        },
+        {
+          id: 5,
+          name: this.$t('pages.aboutPage.team.name'),
+          post: this.$t('pages.aboutPage.team.post'),
+          img: require('@/assets/About/team/team.jpg')
+        },
+        {
+          id: 6,
+          name: this.$t('pages.aboutPage.team.name'),
+          post: this.$t('pages.aboutPage.team.post'),
+          img: require('@/assets/About/team/team.jpg')
+        },
+        {
+          id: 7,
+          name: this.$t('pages.aboutPage.team.name'),
+          post: this.$t('pages.aboutPage.team.post'),
+          img: require('@/assets/About/team/team.jpg')
+        },
       ]
     }
   }
@@ -59,115 +110,183 @@ export default {
 
 <style lang="scss">
 @import '@/assets/scss/variables.scss';
-@keyframes fromLeft {
+@keyframes toTop {
   0%{}
   100%{
-    margin-left: 0;
+    margin-bottom: 0;
     opacity: 1;
   }
 }
-@keyframes fromRight {
-  0%{}
-  100%{
-    left: 0px;
-    opacity: 1;
-  }
+.toTop {
+  margin-bottom: 0 !important;
+  opacity: 1 !important;
+  transition: .8s;
 }
+.fromLeft{
+  margin-left: 0!important;
+  opacity: 1!important;
+  transition: .8s;
+}
+
 .about {
-  padding: 100px 0 50px 0;
-  min-height: 100vh;
-
-  .container {
-    max-width: 920px;
+  padding-bottom: 100px;
+  @media(max-width: 719px) {
+    padding-bottom: 50px;
   }
 
+  &__content {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
-  .title {
-    font-size: 48px;
-    font-weight: 700;
-    color: $secondary;
-    padding-top: 40px;
-    opacity: 0;
-    margin-left: -100px;
-    animation: fromLeft 1s forwards;
-    animation-delay: .3s;
-    
-    @media(max-width: 1139px) {
-      font-size: 36px;
-    }
-    @media(max-width: 719px) {
-      font-size: 32px;
-    }
-  }
-  .text {
-    position: relative;
-    font-size: 20px;
-    margin-top: 20px;
-    font-weight: 300;
-    line-height: 150%;
-    opacity: 0;
-    left: 100px;
-    animation: fromRight 1s forwards;
-    animation-delay: .5s;
 
-    @media(max-width: 1139px) {
-      font-size: 18px;
-      margin-top: 10px;
-    }
-  }
+    &:nth-child(1) {
+      background-image: url('@/assets/About/about_bg1.jpg');
 
-  h1 {
-    font-size: 72px;
-    color: $secondary;
-    font-weight: 900;
-    opacity: 0;
-    margin-left: -100px;
-    animation: fromLeft 1s forwards;
-    text-align: center;
-    @media(max-width: 1139px) {
-      font-size: 64px;
+      .about__content-text {
+        animation: toTop 1s forwards;
+      }
     }
-    @media(max-width: 719px) {
-      font-size: 36px;
-    }
-  }
 
-  .list {
-    margin-top: 20px;
-    opacity: 0;
-    margin-left: -100px;
-    animation: fromLeft 1s forwards;
-    animation-delay: .3s;
-
-    li {
-      padding-left: 15px;
+    &:nth-child(2) {
+      background-image: url('@/assets/About/about_bg2.jpg');
       position: relative;
-      font-size: 20px;
-      font-weight: 300;
-      line-height: 150%;
-      
-
-      &::before {
+      &::before{
         content: '';
-        display: block;
         position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 5px;
-        height: 5px;
-        background: $link-color;
-        border-radius: 50%;
+        top: 0;left: 0;right: 0;bottom: 0;
+        background-color: rgba(#000000, .3);
+        display: block;
+        z-index: 1;
+      }
+
+      .about__content-wrapper {
+        justify-content: flex-end;
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    &:nth-child(3) {
+      background-image: url('@/assets/About/about_bg3.jpg');
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 0;left: 0;right: 0;bottom: 0;
+        background-color: rgba(#000000, .4);
+        display: block;
+        z-index: 1;
+      }
+
+      .about__content-wrapper {
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    &-wrapper {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    &-text {
+      flex: 0 0 440px;
+      opacity: 0;
+      margin-bottom: -100px;
+      animation-fill-mode: forwards;
+      animation-duration: .6s;
+
+      @media(max-width: 1139px) {
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
+
+      h2 {
+        font-size: 72px;
+        font-weight: 900;
+        color: $primary;
+        @media(max-width: 539px) {
+          font-size: 48px;
+        }
+      }
+      p{
+        font-size: 22px;
+        font-weight: 700;
+        color: $primary;
+        margin-top: 20px;
+        @media(max-width: 539px) {
+          font-size: 16px;
+        }
       }
     }
   }
 
-  .image {
-    margin-top: 20px;
-    text-align: center;
+  &__team {
+    padding-top: 100px;
+    @media(max-width: 719px) {
+      padding-top: 50px;
+    }
 
-    img {
-      width: 100%;
+    h1 {
+      font-size: 72px;
+      text-align: center;
+      color: $secondary;
+      font-weight: 900;
+      @media(max-width: 539px) {
+        font-size: 32px;
+      }
+    }
+
+    &-content {
+      padding-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .about__team-card {
+        flex: 0 0 24%;
+        border: solid 2px $link-color;
+        border-radius: 16px;
+        overflow: hidden;
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+        transition: .2s;
+        cursor: pointer;
+        margin-left: -50px;
+        opacity: 0;
+
+        @media(max-width: 1139px) {
+          flex: 0 0 49%;
+        }
+        @media(max-width: 539px) {
+          flex: 0 0 100%;
+        }
+
+        &:hover {
+          box-shadow:  0 15px 20px rgba(0, 0, 0, .2);
+        }
+
+        img {
+          width: 100%;
+        }
+
+        h2 {
+          font-size: 32px;
+          color: $secondary;
+          font-weight: 600;
+          text-align: center;
+          margin-top: 15px;
+        }
+        p {
+          font-size: 18px;
+          font-weight: 400;
+          text-align: center;
+          margin-top: 10px;
+        }
+      }
     }
   }
 }

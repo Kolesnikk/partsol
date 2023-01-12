@@ -1,0 +1,155 @@
+{
+  "component": {
+
+    "header": {
+      "nav": {
+        "about": "About us",
+        "directions": "Directions",
+        "representative": "Representative",
+        "contact": "Contact us"
+      }
+    },
+
+    "footer": {
+
+      "info": {
+        "title": "Information",
+        "link": {
+          "about": "About us",
+          "directions": "Tendency",
+          "representative": "Representative"
+        }
+      },
+
+      "contact": {
+        "title": "Contacts",
+        "num1": "+998 (90) 919-06-05",
+        "num2": "+998 (99) 476-62-72",
+        "contactUs": "Contact us"
+      }
+
+    }
+
+  },
+
+  "pages": {
+    
+    "homePage": {
+      "banner": {
+        "bold": "We are",
+        "txt": "responsible for your business process"
+      },
+      "team": {
+        "title": "Our team",
+        "bold": "THE BEST SPECIALISTS IN THE WORLD",
+        "txt": "will work on your success"
+      },
+      "directions": {
+        "title": "Directions",
+        "bold": "all the directions",
+        "txt": "you need"
+      },
+      "partniers": {
+        "title": "Our partniers",
+        "bold": "THE LARGEST COMPANIES",
+        "txt": "such as SpaceX"
+      }
+    },
+
+    "aboutPage": {
+      "content": {
+        "txt1": "has been conducting business processes in Uzbekistan since 2019, which connects Europe's global projects with Uzbekistan.",
+        "txt2": "are reliable partners in the development and implementation of business and cultural events of any complexity in Uzbekistan and abroad.",
+        "txt3": "are experts in the development and implementation of international and state events of economic, investment, environmental, cultural and other topics."
+      },
+      "team": {
+        "title": "Our team",
+        "name": "Ramir Kolesnik",
+        "post": "Web Developer"
+      }
+    },
+
+    "directionPage": {
+      "title": "Our directions",
+      "content": {
+        "title1": "Education",
+        "txt1": "Text about education",
+        "title2": "Building",
+        "txt2": "Text about building",
+        "title3": "Agricultural industry",
+        "txt3": "Text about agricultural industry",
+        "title4": "Road management",
+        "txt4": "Text about road management",
+        "title5": "Food additives",
+        "txt5": "Text about food additives",
+        "title6": "Logistics",
+        "txt6": "Text about logistics",
+        "title7": "Retail",
+        "txt7": "Text about retail",
+        "title8": "Telecommunications",
+        "txt8": "Text about telecommunications",
+        "title9": "Medical Clinic",
+        "txt9": "Text about medical Clinic",
+        "title10": "IT solutions",
+        "txt10": "Text about IT solutions"
+      }
+    },
+
+    "partniersPage": {
+      "title": "Our representative",
+      "content": {
+        "country1": "Russia",
+        "city1": "Moscow",
+        "country2": "UAE",
+        "city2": "Dubai",
+        "country3": "China",
+        "city3": "Pekin",
+        "txt": "GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones"
+      }
+    },
+
+    "contactPage": {
+      "title": "Contact Us",
+      "info": {
+        "title1": "Contact numbers",
+        "title2": "Our social networks",
+        "title3": "Our location"
+      },
+
+      "form": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Your name"
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Your E-mail"
+        },
+        "number": {
+          "label": "Phone number",
+          "placeholder": "Your phone number"
+        },
+        "country": {
+          "label": "Country",
+          "placeholder": "Country"
+        },
+        "city": {
+          "label": "City",
+          "placeholder": "City"
+        },
+        "company": {
+          "label": "Company name",
+          "placeholder": "Your company"
+        }
+      }
+
+    }
+
+  },
+
+  "button": {
+    "contactUs": "Contact us",
+    "more": "more",
+    "confirm": "confirm"
+  }
+}

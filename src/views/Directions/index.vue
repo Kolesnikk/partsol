@@ -1,7 +1,7 @@
 <template>
   <div class="directions">
     <div class="container">
-      <h1>Направления компании</h1>
+      <h1>{{$t('pages.directionPage.title')}}</h1>
       <ul>
         <li v-for="i in list" :key="i.id" @click="i.isActive=!i.isActive">
           <img src="@/assets/icons/arrow.svg" :class="{active: i.isActive}">
@@ -22,68 +22,68 @@ export default {
         {
           isActive: false,
           id: 0,
-          title: 'Образование',
-          text: 'The BOD2 3D printer is the fastest 3D construction printer on the market, with a print speed of up to 1000 mm/s. Without a safety fence, the printer can be operated at speeds of up to 250 mm/s. For faster speeds, a safety fence needs to be installed to comply with EU certification. The speed makes the technology even more competitive compared to traditional construction technology.'
+          title: this.$t('pages.directionPage.content.title1'),
+          text: this.$t('pages.directionPage.content.txt1')
         },
         {
           isActive: false,
           id: 1,
-          title: 'Строительство',
-          text: 'The BOD2 3D printer is the fastest 3D construction printer on the market, with a print speed of up to 1000 mm/s. Without a safety fence, the printer can be operated at speeds of up to 250 mm/s. For faster speeds, a safety fence needs to be installed to comply with EU certification. The speed makes the technology even more competitive compared to traditional construction technology.'
+          title: this.$t('pages.directionPage.content.title2'),
+          text: this.$t('pages.directionPage.content.txt2')
         },
         {
           isActive: false,
           id: 2,
-          title: 'Сельское хозяйство',
-          text: 'The BOD2 3D printer is the fastest 3D construction printer on the market, with a print speed of up to 1000 mm/s. Without a safety fence, the printer can be operated at speeds of up to 250 mm/s. For faster speeds, a safety fence needs to be installed to comply with EU certification. The speed makes the technology even more competitive compared to traditional construction technology.'
+          title: this.$t('pages.directionPage.content.title3'),
+          text: this.$t('pages.directionPage.content.txt3')
         },
         {
           isActive: false,
           id: 3,
-          title: 'Автодорожное хозяйство',
-          text: 'The BOD2 3D printer is the fastest 3D construction printer on the market, with a print speed of up to 1000 mm/s. Without a safety fence, the printer can be operated at speeds of up to 250 mm/s. For faster speeds, a safety fence needs to be installed to comply with EU certification. The speed makes the technology even more competitive compared to traditional construction technology.'
+          title: this.$t('pages.directionPage.content.title4'),
+          text: this.$t('pages.directionPage.content.txt4')
         },
         {
           isActive: false,
           id: 4,
-          title: 'Пищевые добавки',
-          text: 'The BOD2 3D printer is the fastest 3D construction printer on the market, with a print speed of up to 1000 mm/s. Without a safety fence, the printer can be operated at speeds of up to 250 mm/s. For faster speeds, a safety fence needs to be installed to comply with EU certification. The speed makes the technology even more competitive compared to traditional construction technology.'
+          title: this.$t('pages.directionPage.content.title5'),
+          text: this.$t('pages.directionPage.content.txt5')
         },
         {
           isActive: false,
           id: 5,
-          title: 'Логистика',
-          text: 'The BOD2 3D printer is the fastest 3D construction printer on the market, with a print speed of up to 1000 mm/s. Without a safety fence, the printer can be operated at speeds of up to 250 mm/s. For faster speeds, a safety fence needs to be installed to comply with EU certification. The speed makes the technology even more competitive compared to traditional construction technology.'
+          title: this.$t('pages.directionPage.content.title6'),
+          text: this.$t('pages.directionPage.content.txt6')
         },
         {
           isActive: false,
           id: 6,
-          title: 'Ритэил',
-          text: 'The BOD2 3D printer is the fastest 3D construction printer on the market, with a print speed of up to 1000 mm/s. Without a safety fence, the printer can be operated at speeds of up to 250 mm/s. For faster speeds, a safety fence needs to be installed to comply with EU certification. The speed makes the technology even more competitive compared to traditional construction technology.'
+          title: this.$t('pages.directionPage.content.title7'),
+          text: this.$t('pages.directionPage.content.txt7')
         },
         {
           isActive: false,
           id: 7,
-          title: 'Телекоммуникация',
-          text: 'The BOD2 3D printer is the fastest 3D construction printer on the market, with a print speed of up to 1000 mm/s. Without a safety fence, the printer can be operated at speeds of up to 250 mm/s. For faster speeds, a safety fence needs to be installed to comply with EU certification. The speed makes the technology even more competitive compared to traditional construction technology.'
+          title: this.$t('pages.directionPage.content.title8'),
+          text: this.$t('pages.directionPage.content.txt8')
         },
         {
           isActive: false,
           id: 8,
-          title: 'Медицинская клиника',
-          text: 'The BOD2 3D printer is the fastest 3D construction printer on the market, with a print speed of up to 1000 mm/s. Without a safety fence, the printer can be operated at speeds of up to 250 mm/s. For faster speeds, a safety fence needs to be installed to comply with EU certification. The speed makes the technology even more competitive compared to traditional construction technology.'
+          title: this.$t('pages.directionPage.content.title9'),
+          text: this.$t('pages.directionPage.content.txt9')
         },
         {
           isActive: false,
           id: 9,
-          title: 'IT решения',
-          text: 'The BOD2 3D printer is the fastest 3D construction printer on the market, with a print speed of up to 1000 mm/s. Without a safety fence, the printer can be operated at speeds of up to 250 mm/s. For faster speeds, a safety fence needs to be installed to comply with EU certification. The speed makes the technology even more competitive compared to traditional construction technology.'
+          title: this.$t('pages.directionPage.content.title10'),
+          text: this.$t('pages.directionPage.content.txt10')
         },
         {
           isActive: false,
           id: 10,
-          title: 'Благотворительность',
-          text: 'The BOD2 3D printer is the fastest 3D construction printer on the market, with a print speed of up to 1000 mm/s. Without a safety fence, the printer can be operated at speeds of up to 250 mm/s. For faster speeds, a safety fence needs to be installed to comply with EU certification. The speed makes the technology even more competitive compared to traditional construction technology.'
+          title: this.$t('pages.directionPage.content.title1'),
+          text: this.$t('pages.directionPage.content.txt')
         },
       ],
     }
@@ -110,23 +110,22 @@ export default {
 
 .directions {
   min-height: 100vh;
-  padding-top: 100px;
+  padding-top: 140px;
   padding-bottom: 20px;
-
   .container {
     max-width: 920px;
   }
 
   h1 {
-    font-size: 38px;
+    font-size: 64px;
     text-transform: uppercase;
     text-align: center;
-    font-weight: 600;
+    font-weight: 900;
     color: $secondary;
     opacity: 0;
     margin-left: -100px;
     animation: fromLeft 1s forwards;
-    @media(max-width: 959px) {
+    @media(max-width: 539px) {
       font-size: 32px;
     }
   }

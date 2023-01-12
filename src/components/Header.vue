@@ -2,24 +2,32 @@
   <header class="header">
     <div class="container header-container">
       <div class="header__content">
-
         <div class="header__content-logo">
           <router-link :to="{name: 'home'}">
             <img src="@/assets/icons/header_logo.svg" alt="logo">
           </router-link>
         </div>
         
+        <div class="header__right">
+
         <div class="header__content-nav">
           <ul class="nav__menu" :class="{active: isActive}">
             <li v-for="i in menu" :key="i.id" @click="isActive=false">
-              <router-link :to="{name: i.path}" active-class="active-link" @click="isActive=false">{{ i.name }}</router-link>
+              <router-link :to="{name: i.path}" active-class="active-link" @click="isActive=false">{{i.name}}</router-link>
             </li>
           </ul>
+        </div>
+
+        <div class="language">
+          <button @click="changeLanguage('ru')" :class="{activeLang : activeRu}">Ru</button>
+          <button @click="changeLanguage('en')" :class="{activeLang : activeEn}">En</button>
         </div>
 
         <button class="hamburger" @click="isActive=!isActive">
           <span></span>
         </button>
+
+        </div>
 
       </div>
     </div>
@@ -33,28 +41,43 @@ export default {
     return {
       menu: [
         {
-          name: 'О нас',
+          name: this.$t('component.header.nav.about'),
           path: 'about',
           id: 0
         },
         {
-          name: 'Направления',
+          name: this.$t('component.header.nav.directions'),
           path: 'directions',
           id: 1
         },
         {
-          name: 'Представительства',
+          name: this.$t('component.header.nav.representative'),
           path: 'partniers',
           id: 2
         },
         {
-          name: 'Связаться с нами',
+          name: this.$t('component.header.nav.contact'),
           path: 'contact',
           id: 3
         }
       ],
-      isActive: false
+      isActive: false,
+      activeRu: this.$i18n.locale == 'ru' ? true : false,
+      activeEn: this.$i18n.locale == 'en' ? true : false
     }
+  },
+  methods: {
+    changeLanguage(language) {
+      localStorage.setItem("lang", language)
+      window.location.reload()
+      this.$forceUpdate()
+    }
+  },
+  created() {
+    if(localStorage.getItem('lang') == null) {
+      localStorage.setItem('lang', 'en')
+    }
+    this.language = localStorage.getItem('lang')
   }
 }
 </script>
@@ -73,7 +96,7 @@ export default {
 
 .header {
   position: fixed;
-  z-index: 2;
+  z-index: 10;
   top: -100%;
   left: 0;
   right: 0;
@@ -84,6 +107,41 @@ export default {
   animation-duration: 1s;
   animation-fill-mode: forwards;
 
+  &__right {
+    display: flex;
+    align-items: center;
+    
+    .language {
+      margin-left: 50px;
+      display: flex;
+      align-items: center;
+      @media(max-width: 860px) {
+        margin-right: 20px;
+      }
+      position: relative;
+      z-index: 16;
+      .activeLang {
+        color: white;
+        background: $link-color;
+      }
+      button {
+        background: transparent;
+        font-size: 14px;
+        font-weight: 400;
+        height: 30px;
+        width: 40px;
+        background: rgb(228, 228, 228);
+        color: rgb(148, 148, 148);
+        transition: .2s;
+        
+        &:hover {
+          background: $link-color;
+          color: white;
+        }
+      }
+      
+    }
+  }
   @media(max-width: 719px) {
     padding: 10px 0;
   }
@@ -154,7 +212,7 @@ export default {
         transform: translateY(-50%);
       }
 
-      @media(max-width: 719px) {
+      @media(max-width: 860px) {
         display: block;
       }
     }
@@ -165,7 +223,7 @@ export default {
         display: flex;
         transition: .2s;
 
-        @media(max-width: 719px){
+        @media(max-width: 860px){
           background: #ffffff;
           position: fixed;
           left: 0;
@@ -191,10 +249,7 @@ export default {
             @media(max-width: 1139px) {
               margin-right: 30px;
             }
-            @media(max-width: 719px) {
-              margin-right: 20px;
-            }
-            @media(max-width: 719px) {
+            @media(max-width: 860px) {
               margin-right: 0;
               margin-bottom: 20px;
             }

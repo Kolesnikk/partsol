@@ -5,9 +5,9 @@
       <div class="container">
         <div class="home__banner-wrapper">
           <div class="banner-content">
-            <h1>Мировой лидер</h1>
-            <p><span>Partniers & Solutions</span> мировой лидер и еще что-то...</p>
-            <router-link class="button" :to="{name: 'contact'}">связаться с нами</router-link>
+            <h1>Partners & Solutions</h1>
+            <p><span>{{ $t('pages.homePage.banner.bold') }}</span> {{ $t('pages.homePage.banner.txt') }}</p>
+            <router-link class="button" :to="{name: 'contact'}">{{$t('button.contactUs')}}</router-link>
           </div>
         </div>
       </div>
@@ -17,9 +17,9 @@
       <div class="container">
         <div class="home__team-wrapper">
           <div class="team-content" v-animate-onscroll="{down : 'toTop'}">
-            <h1>Наша команда</h1>
-            <p><span>Лучшие специалисты мира</span> будут работать над вашим успехом</p>
-            <router-link class="button" :to="{name: 'about'}">Подробнее</router-link>
+            <h1>{{ $t('pages.homePage.team.title') }}</h1>
+            <p><span>{{ $t('pages.homePage.team.bold') }}</span> {{ $t('pages.homePage.team.txt') }}</p>
+            <router-link class="button" :to="{name: 'about'}">{{ $t('button.more') }}</router-link>
           </div>
         </div>
       </div>
@@ -29,9 +29,9 @@
       <div class="container">
         <div class="home__directions-wrapper">
           <div class="directions-content" v-animate-onscroll="{down : 'toTop'}">
-            <h1>Направления</h1>
-            <p><span>Все направления</span> которые вам нужны!</p>
-            <router-link class="button" :to="{name: 'directions'}">Подробнее</router-link>
+            <h1>{{ $t('pages.homePage.directions.title') }}</h1>
+            <p><span>{{ $t('pages.homePage.directions.bold') }}</span> {{ $t('pages.homePage.directions.txt') }}</p>
+            <router-link class="button" :to="{name: 'directions'}">{{$t('button.more')}}</router-link>
           </div>
         </div>
       </div>
@@ -41,9 +41,9 @@
       <div class="container">
         <div class="home__partniers-wrapper">
           <div class="partniers-content" v-animate-onscroll="{down : 'toTop'}">
-            <h1>Наши партнеры</h1>
-            <p><span>Самые крупные компании</span> такие как SpaceX</p>
-            <router-link class="button" :to="{name: 'partniers'}">Подробнее</router-link>
+            <h1>{{$t('pages.homePage.partniers.title')}}</h1>
+            <p><span>{{$t('pages.homePage.partniers.bold')}}</span> {{$t('pages.homePage.partniers.txt')}}</p>
+            <router-link class="button" :to="{name: 'partniers'}">{{$t('button.more')}}</router-link>
           </div>
         </div>
       </div>

@@ -2,8 +2,7 @@
   <div class="partniers">
     <div class="container">
 
-      <h1 class="title">Наши представительства</h1>
-      <p class="subtitle">We are delighted to present some of the achievements and collaborations of COBOD. </p>
+      <h1 class="title">{{ $t('pages.partniersPage.title') }}</h1>
     
       <div class="partniers__content">
 
@@ -33,44 +32,44 @@ export default {
         {
           id: 0,
           img: require('@/assets/partniers/moscow.jpg'),
-          country: 'Россия',
-          city: 'Москва',
-          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones'
+          country: this.$t('pages.partniersPage.content.country1'),
+          city: this.$t('pages.partniersPage.content.city1'),
+          text: this.$t('pages.partniersPage.content.txt')
         },
         {
           id: 1,
           img: require('@/assets/partniers/dubai.jpg'),
-          country: 'ОАЭ',
-          city: 'Дубай',
-          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones'
+          country: this.$t('pages.partniersPage.content.country2'),
+          city:this.$t('pages.partniersPage.content.city2'),
+          text: this.$t('pages.partniersPage.content.txt')
         },
         {
           id: 2,
           img: require('@/assets/partniers/pekin.jpg'),
-          country: 'Китай',
-          city: 'Пекин',
-          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones'
+          country: this.$t('pages.partniersPage.content.country3'),
+          city:this.$t('pages.partniersPage.content.city3'),
+          text: this.$t('pages.partniersPage.content.txt')
         },
         {
           id: 3,
           img: require('@/assets/partniers/moscow.jpg'),
-          country: 'Россия',
-          city: 'Москва',
-          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones'
+          country: this.$t('pages.partniersPage.content.country1'),
+          city: this.$t('pages.partniersPage.content.city1'),
+          text: this.$t('pages.partniersPage.content.txt')
         },
         {
           id: 4,
           img: require('@/assets/partniers/dubai.jpg'),
-          country: 'ОАЭ',
-          city: 'Дубай',
-          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones'
+          country: this.$t('pages.partniersPage.content.country2'),
+          city:this.$t('pages.partniersPage.content.city2'),
+          text: this.$t('pages.partniersPage.content.txt')
         },
         {
           id: 5,
           img: require('@/assets/partniers/pekin.jpg'),
-          country: 'Китай',
-          city: 'Пекин',
-          text: 'GE Renewable Energy combines one of the broadest portfolios in the renewable energy industry to provide end-to-end solutions to customers demanding reliable and affordable green power. Together with COBOD they are developing and optimizing 3D printed concrete bases for wind turbines, which would be printed directly on-site and allow the towers to be taller than traditional all steel ones'
+          country: this.$t('pages.partniersPage.content.country3'),
+          city:this.$t('pages.partniersPage.content.city3'),
+          text: this.$t('pages.partniersPage.content.txt')
         },
       ]
     }
@@ -90,7 +89,7 @@ export default {
 
 .partniers {
   min-height: 100vh;
-  padding-top: 100px;
+  padding-top: 140px;
   padding-bottom: 50px;
 
   .title {

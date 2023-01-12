@@ -11,7 +11,7 @@
         </div>
 
         <div class="footer__content-info">
-          <h2>Информация</h2>
+          <h2>{{ $t('component.footer.info.title') }}</h2>
           <ul>
             <li v-for="i in info" :key="i.id">
               <router-link :to="{name: i.link}">{{ i.name }}</router-link>
@@ -20,9 +20,10 @@
         </div>
 
         <div class="footer__content-contact">
-          <h2>Контакты</h2>
-          <a href="tel:+998998012666">+998998012666</a>
-          <router-link :to="{name: 'contact'}">ОСТАВИТЬ ЗАЯВКУ</router-link>
+          <h2>{{ $t('component.footer.contact.title') }}</h2>
+          <a href="tel:+998994766272">{{ $t('component.footer.contact.num2') }}</a>
+          <a href="tel:+998909190605">{{ $t('component.footer.contact.num1') }}</a>
+          <router-link :to="{name: 'contact'}">{{ $t('component.footer.contact.contactUs') }}</router-link>
         </div>
 
       </div>
@@ -39,17 +40,17 @@ export default {
       info: [
         {
           id: 0,
-          name: 'О НАС',
+          name: this.$t('component.footer.info.link.about'),
           link: 'about'
         },
         {
           id: 1,
-          name: 'НАПРАВЛЕНИЯ',
+          name: this.$t('component.footer.info.link.directions'),
           link: 'directions'
         },
         {
           id: 2,
-          name: 'ПАРТНЕРЫ',
+          name: this.$t('component.footer.info.link.representative'),
           link: 'partniers'
         },
       ]

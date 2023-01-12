@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <div class="container">
-      <h1 class="title">Связаться с нами</h1>
+      <h1 class="title">{{$t('pages.contactPage.title')}}</h1>
 
       <div class="contact__content">
 
@@ -9,60 +9,60 @@
 
           <div class="contact__content-left-wrapper">
             <div class="phone">
-              <h2 class="subtitle">Контактные номера</h2>
-              <p class="text">Наш колл центр</p>
-              <a class="link" href="tel:+998998012666">+998998012666</a>
+              <h2 class="subtitle">{{ $t('pages.contactPage.info.title1') }}</h2>
+              <a class="link" href="tel:+998994766272">+998 (99) 476-62-72</a>
+              <a class="link" href="tel:+998909190605">+998 (90) 919-06-05</a>
             </div>
 
             <div class="socials">
-              <h2 class="subtitle">Наши соц сети</h2>
+              <h2 class="subtitle">{{ $t('pages.contactPage.info.title2') }}</h2>
               <a class="link" href="https://t.me/D_ramir" target="_blunk">Telegram: @D_ramir</a>
               <a class="link" href="https://t.me/D_ramir" target="_blunk">Telegram: @Success</a>
             </div>
           </div>
 
           <div class="location">
-            <h2 class="subtitle">Наше местоположение</h2>
+            <h2 class="subtitle">{{ $t('pages.contactPage.info.title3') }}</h2>
             <iframe class="loc" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1497.8721134273706!2d69.24585928156722!3d41.336174854713924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b7c31d8bde5%3A0xab8867170443354b!2zNiBTaGltb2xpeSBPbG1hem9yIFN0ci4sIFRhc2hrZW50LCDQo9C30LHQtdC60LjRgdGC0LDQvQ!5e0!3m2!1sru!2s!4v1672775310572!5m2!1sru!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
 
         <form action="" class="form">
           <label for="name">
-            <span>Имя</span>
-            <input type="text" id="name" placeholder="Рамир">
+            <span>{{ $t('pages.contactPage.form.name.label') }}</span>
+            <input type="text" id="name" :placeholder="$t('pages.contactPage.form.name.label')">
           </label>
 
           <label for="email">
-            <span>Email</span>
-            <input type="email" id="email" placeholder="example@gmail.com">
+            <span>{{ $t('pages.contactPage.form.email.label') }}</span>
+            <input type="email" id="email" :placeholder="$t('pages.contactPage.form.email.label')">
           </label>
           
 
           <label for="phone">
-            <span>Номер телефона</span> 
-            <input type="text" id="phone" placeholder="+998998012666">
+            <span>{{ $t('pages.contactPage.form.number.label') }}</span> 
+            <input type="text" id="phone" :placeholder="$t('pages.contactPage.form.number.label')">
           </label>
           
 
           <label for="country">
-            <span>Страна</span> 
-            <input type="text" id="country" placeholder="Узбекистан">
+            <span>{{ $t('pages.contactPage.form.country.label') }}</span> 
+            <input type="text" id="country" :placeholder="$t('pages.contactPage.form.country.label')">
           </label>
           
 
           <label for="city">
-            <span>Город</span> 
-            <input type="text" id="city" placeholder="Ташкент">
+            <span>{{ $t('pages.contactPage.form.city.label') }}</span> 
+            <input type="text" id="city" :placeholder="$t('pages.contactPage.form.city.label')">
           </label>
           
 
           <label for="company-name">
-            <span>Название компании</span> 
-            <input type="text" id="company-name" placeholder="spaceX">
+            <span>{{ $t('pages.contactPage.form.company.label') }}</span> 
+            <input type="text" id="company-name" :placeholder="$t('pages.contactPage.form.company.label')">
           </label>
 
-          <button type="submit" class="submit">Оставить заявку</button>
+          <button type="submit" class="submit">{{$t('button.confirm')}}</button>
           
         </form>
       
@@ -83,7 +83,7 @@ export default {
 
 .contact {
   min-height: 100vh;
-  padding-top: 100px;
+  padding-top: 140px;
 
   .container {
     max-width: 920px;
